@@ -1,9 +1,10 @@
-name: helloworld
+name: hello world
 on:
   push: 
-    branches: [main]
+    branches: [master]
 jobs:
   say-hello:
     runs-on: ubuntu-latest
     steps:
-      - run: echo Hello World
+      - run: echo "TODAY=$(date +%y-%m-%d)" 
+      - run: echo Hello World, today is $TODAY
